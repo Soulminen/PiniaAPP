@@ -6,7 +6,6 @@ interface CounterOptionsState {
 }
 
 
-
 export const useCounterOptionsStore = defineStore('counterOptions', {
     state: () => ({
         count: 0,
