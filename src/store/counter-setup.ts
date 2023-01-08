@@ -5,17 +5,17 @@ import { defineStore } from 'pinia';
 export const useCounterSetupStore = defineStore('counterSetup', () => {
 
     const count      = ref<number>(0);
-    const lastChange = ref<Date>();
+    const lastChanged = ref<Date>();
 
     const incrementBy = ( value: number ) => {
         count.value += value;
-        lastChange.value = new Date();
+        lastChanged.value = new Date();
     }
 
     return {
         // State properties
         count,
-        lastChange,
+        lastChanged,
         //Getters
 
         squareCount: computed( () => count.value * count.value ), 
